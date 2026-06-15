@@ -1,0 +1,186 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.topBar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  color: #64748b;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.topActions {
+  display: flex;
+  gap: 10px;
+}
+
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #475569;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #dc2626;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.deleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.filters {
+  margin-bottom: 16px;
+}
+
+.typeTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.typeTab {
+  padding: 6px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  color: #475569;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.typeTab:hover {
+  border-color: #4f46e5;
+  color: #4f46e5;
+}
+
+.typeTabActive {
+  background: #eef2ff;
+  border-color: #4f46e5;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  color: #94a3b8;
+  gap: 12px;
+}
+
+.tableCard {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+.selectedCount {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.table th {
+  background: #f8fafc;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.table tr:hover td {
+  background: #f8fafc;
+}
+
+.rowSelected td {
+  background: #eef2ff !important;
+}
+
+.checkCol {
+  width: 40px;
+  text-align: center;
+}
+
+.idCol {
+  color: #4f46e5 !important;
+  font-weight: 500;
+  font-family: monospace;
+}
+
+.syncCol {
+  color: #94a3b8 !important;
+  font-family: monospace;
+  font-size: 0.75rem;
+}
