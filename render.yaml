@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: qbo-transaction-manager
+    env: node
+    buildCommand: npm install && cd client && npm install && npm run build && cd ../server && npm install && npm run build
+    startCommand: node server/dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: QBO_CLIENT_ID
+        sync: false
+      - key: QBO_CLIENT_SECRET
+        sync: false
+      - key: QBO_REDIRECT_URI
+        sync: false
+      - key: QBO_ENVIRONMENT
+        value: sandbox
+      - key: SESSION_SECRET
+        generateValue: true
